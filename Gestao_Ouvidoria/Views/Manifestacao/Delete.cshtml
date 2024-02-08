@@ -1,0 +1,136 @@
+﻿@model Gestao_Ouvidoria.Models.Manifestacao
+@using Gestao_Ouvidoria.Helpers
+
+
+<table class="tab_cadre" width="700">
+    <tbody>
+        <tr>
+            <th colspan="3">Manifestação</th>
+        </tr>
+        <tr class="tab_bg_1">
+            <td colspan="3" style="text-align: center; vertical-align: middle;">
+                <img src="../../Imgs/logo.png" alt="" class="img-fluid" style="height:100px;">
+            </td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Perfil.Nome)</td>
+            <td>
+                @Html.DisplayFor(model => model.Perfil.Nome)
+            </td>
+            <td colspan="2"></td>
+        </tr>
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Perfil.Email)</td>
+            <td>
+                @Html.DisplayFor(model => model.Perfil.Email)
+            </td>
+            <td colspan="2"></td>
+        </tr>
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Perfil.Telefone)</td>
+            <td>
+                @Html.DisplayFor(model => model.Perfil.Telefone)
+            </td>
+            <td colspan="2"></td>
+        </tr>
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Perfil.Celular)</td>
+            <td>
+                @Html.DisplayFor(model => model.Perfil.Celular)
+            </td>
+            <td colspan="2"></td>
+        </tr>
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Perfil.TipoPerfil)</td>
+            <td>@Html.DisplayFor(model => model.Perfil.TipoPerfil)</td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Campus)</td>
+            <td>@Html.DisplayFor(model => model.Campus)</td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Curso)</td>
+            <td>@Html.DisplayFor(model => model.Curso)</td>
+            <td colspan="2"></td>
+        </tr>
+
+
+        <tr class="tab_bg_1">
+            <td> @Html.DisplayNameFor(model => model.TipoSolicitacao)</td>
+            <td> @Html.DisplayFor(model => model.TipoSolicitacao)</td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Setor)</td>
+            <td>@Html.DisplayFor(model => model.Setor)</td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Assunto)</td>
+            <td>@Html.DisplayFor(model => model.Assunto)</td>
+            <td colspan="2"></td>
+        </tr>
+
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.ManifestacaoConteudo) </td>
+            <td>@Html.DisplayFor(model => model.ManifestacaoConteudo)</td>
+            <td colspan="2"></td>
+        </tr>
+
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Created)</td>
+            <td>@Html.DisplayFor(model => model.Created)</td>
+            <td colspan="2"></td>
+        </tr>
+
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Modified)</td>
+            <td>@Html.DisplayFor(model => model.Modified)</td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Status) </td>
+            <td>@Html.DisplayFor(model => model.Status)</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.StatusSetor) </td>
+            <td>@Html.DisplayFor(model => model.StatusSetor)</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <td>
+                @{
+                    if (!(@ViewBag.ButtonDisabled))
+                    {
+                        using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-actions no-color">
+                                <input type="submit" value="Delete" class="btn btn-danger pull-right" />
+                            </div>
+                        }
+                    }
+                }
+
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+

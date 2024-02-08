@@ -1,0 +1,140 @@
+﻿@model Gestao_Ouvidoria.Models.RespostaManifestacao
+@using Gestao_Ouvidoria.Helpers
+
+
+
+
+<table class="tab_cadre" width="700">
+    <tbody>
+        <tr>
+            <th colspan="3">Manifestação</th>
+        </tr>
+        <tr class="tab_bg_1">
+            <td colspan="3" style="text-align: center; vertical-align: middle;">
+                <img src="../../Imgs/logo.png" alt="" class="img-fluid" style="height:100px;">
+            </td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Manifestacao.Perfil.Nome)</td>
+            <td>
+                @Html.DisplayFor(model => model.Manifestacao.Perfil.Nome)
+            </td>
+            <td colspan="2"></td>
+        </tr>
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Manifestacao.Perfil.Email)</td>
+            <td>
+                @Html.DisplayFor(model => model.Manifestacao.Perfil.Email)
+            </td>
+            <td colspan="2"></td>
+        </tr>
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Manifestacao.Perfil.Telefone)</td>
+            <td>
+                @Html.DisplayFor(model => model.Manifestacao.Perfil.Telefone)
+            </td>
+            <td colspan="2"></td>
+        </tr>
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Manifestacao.Perfil.Celular)</td>
+            <td>
+                @Html.DisplayFor(model => model.Manifestacao.Perfil.Celular)
+            </td>
+            <td colspan="2"></td>
+        </tr>
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Manifestacao.Perfil.TipoPerfil)</td>
+            <td>
+                @Html.DisplayFor(model => model.Manifestacao.Perfil.TipoPerfil)
+            </td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Manifestacao.Campus)</td>
+            <td>@Html.DisplayFor(model => model.Manifestacao.Campus)</td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Manifestacao.Curso)</td>
+            <td>@Html.DisplayFor(model => model.Manifestacao.Curso)</td>
+            <td colspan="2"></td>
+        </tr>
+
+
+        <tr class="tab_bg_1">
+            <td> @Html.DisplayNameFor(model => model.Manifestacao.TipoSolicitacao)</td>
+            <td> @Html.DisplayFor(model => model.Manifestacao.TipoSolicitacao)</td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Manifestacao.Setor)</td>
+            <td>@Html.DisplayFor(model => model.Manifestacao.Setor)</td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Manifestacao.Assunto)</td>
+            <td>@Html.DisplayFor(model => model.Manifestacao.Assunto)</td>
+            <td colspan="2"></td>
+        </tr>
+
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Manifestacao.ManifestacaoConteudo) </td>
+            <td>@Html.DisplayFor(model => model.Manifestacao.ManifestacaoConteudo)</td>
+            <td colspan="2"></td>
+        </tr>
+
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Manifestacao.Created)</td>
+            <td>@Html.DisplayFor(model => model.Manifestacao.Created)</td>
+            <td colspan="2"></td>
+        </tr>
+
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Manifestacao.Modified)</td>
+            <td>@Html.DisplayFor(model => model.Manifestacao.Modified)</td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Manifestacao.Status) </td>
+            <td>@Html.DisplayFor(model => model.Manifestacao.Status)</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Manifestacao.StatusSetor) </td>
+            <td>@Html.DisplayFor(model => model.Manifestacao.StatusSetor)</td>
+            <td colspan="2"></td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+<table class="tab_cadre" width="700">
+    <tbody>
+        <tr>
+            <th colspan="3">Resposta Manifestação</th>
+        </tr>
+
+
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.ManifestacaoResposta) </td>
+            <td>@Html.DisplayFor(model => model.ManifestacaoResposta)</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr class="tab_bg_1">
+            <td>@Html.DisplayNameFor(model => model.Arquivo) </td>
+            <td>@Html.DisplayFor(model => model.Arquivo)</td>
+            <td colspan="2"></td>
+        </tr>
+
+    </tbody>
+</table>

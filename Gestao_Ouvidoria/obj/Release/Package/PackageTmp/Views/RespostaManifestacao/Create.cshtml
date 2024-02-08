@@ -1,0 +1,229 @@
+﻿@model Gestao_Ouvidoria.Models.RespostaManifestacao
+@using Gestao_Ouvidoria.Helpers
+
+
+<table class="tab_cadre" width="700">
+    <tbody>
+        <tr>
+            <th colspan="3">Manifestação</th>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td colspan="3" style="text-align: center; vertical-align: middle;">
+                <img src="../../Imgs/logo.png" alt="" class="img-fluid" style="height:100px;">
+            </td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>Nome</td>
+            <td>
+                @ViewBag.Manifestacao.Perfil.Nome
+            </td>
+            <td colspan="2"></td>
+        </tr>
+        <tr class="tab_bg_1">
+            <td>E-mail</td>
+            <td>
+                @ViewBag.Manifestacao.Perfil.Email
+            </td>
+            <td colspan="2"></td>
+        </tr>
+        <tr class="tab_bg_1">
+            <td>Telefone</td>
+            <td>
+                @ViewBag.Manifestacao.Perfil.Telefone
+            </td>
+            <td colspan="2"></td>
+        </tr>
+        <tr class="tab_bg_1">
+            <td>Celular</td>
+            <td>
+                @ViewBag.Manifestacao.Perfil.Celular
+            </td>
+            <td colspan="2"></td>
+        </tr>
+        <tr class="tab_bg_1">
+            <td>Tipo Perfil</td>
+            <td>
+                @{
+                    var tipoperfil = EnumHelperAttribute.GetDisplayName(@ViewBag.Manifestacao.Perfil.TipoPerfil);
+                    @Html.Raw(tipoperfil);
+                }
+
+            </td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>Campus</td>
+            <td>
+                @{
+                    var campus = EnumHelperAttribute.GetDisplayName(@ViewBag.Manifestacao.Campus);
+                    @Html.Raw(campus);
+                }
+
+            </td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>Curso</td>
+            <td>
+                @{
+                    var curso = EnumHelperAttribute.GetDisplayName(@ViewBag.Manifestacao.Curso);
+                    @Html.Raw(curso);
+                }
+
+            </td>
+            <td colspan="2"></td>
+        </tr>
+
+
+        <tr class="tab_bg_1">
+            <td>Tipo Solicitação</td>
+            <td>
+                @{
+                    var tiposolicitacao = EnumHelperAttribute.GetDisplayName(@ViewBag.Manifestacao.TipoSolicitacao);
+                    @Html.Raw(tiposolicitacao);
+                }
+
+            </td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>Setor</td>
+            <td>
+                @{
+                    var setor = EnumHelperAttribute.GetDisplayName(@ViewBag.Manifestacao.Setor);
+                    @Html.Raw(setor);
+                }
+
+            </td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>Assunto</td>
+            <td>@ViewBag.Manifestacao.Assunto</td>
+            <td colspan="2"></td>
+        </tr>
+
+
+        <tr class="tab_bg_1">
+            <td>Manifestacao Conteudo</td>
+            <td>@ViewBag.Manifestacao.ManifestacaoConteudo</td>
+            <td colspan="2"></td>
+        </tr>
+
+
+        <tr class="tab_bg_1">
+            <td>Criado em</td>
+            <td>@ViewBag.Manifestacao.Created</td>
+            <td colspan="2"></td>
+        </tr>
+
+
+        <tr class="tab_bg_1">
+            <td>Modificado em</td>
+            <td>@ViewBag.Manifestacao.Modified</td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>Status</td>
+            <td>
+                @{
+                    var status = EnumHelperAttribute.GetDisplayName(@ViewBag.Manifestacao.Status);
+                    @Html.Raw(status);
+                }
+
+            </td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr class="tab_bg_1">
+            <td>Status Setor</td>
+            <td>
+                @{
+                    var statusEncaminhado = EnumHelperAttribute.GetDisplayName(@ViewBag.Manifestacao.StatusSetor);
+                    @Html.Raw(statusEncaminhado);
+                }
+
+            </td>
+            <td colspan="2"></td>
+        </tr>
+
+
+    </tbody>
+</table>
+
+<p>
+    @ViewBag.Message
+</p>
+
+<div class="card_resposta">
+    @{
+        if (ViewBag.FormDisabled)
+        {
+            <p>Formulário Indisponivel</p>
+        }
+        else
+        {
+            using (Html.BeginForm("Create",
+                        "RespostaManifestacao",
+                        FormMethod.Post,
+                        new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>Formulário</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ManifestacaoResposta, "Mensagem", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.ManifestacaoResposta, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.ManifestacaoResposta, "", new { @class = "text-danger" })
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Arquivo, "Arquivo anexo", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <input type="file" name="file" />
+                            @Html.ValidationMessageFor(model => model.Arquivo, "", new { @class = "text-danger" })
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        @Html.DropDownListFor(model => model.IdManifestacao, null, htmlAttributes: new { @class = "form-control", @style = "display:none" })
+
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Enviar Resposta" class="btn btn-primary pull-right" />
+                        </div>
+                    </div>
+                </div>
+
+            }
+        }
+    }
+
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+}
+
+

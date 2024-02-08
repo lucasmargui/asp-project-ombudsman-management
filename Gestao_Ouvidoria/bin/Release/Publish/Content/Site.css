@@ -1,0 +1,283 @@
+﻿body {
+    padding-bottom: 20px;
+    background: #dfdfdf repeat-x;
+}
+
+
+
+
+.navbar {
+    background: #3c8dbc;
+    border-color: #3c8dbc;
+    color: white;
+}
+.linknavbar {
+    font-weight:200 !important;
+    color:white !important;
+   
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: white !important;
+}
+
+
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    /*max-width: 280px;*/
+}
+
+
+.tab_glpi {
+    margin: 0 auto;
+}
+
+.tab_cadre {
+    font-size: 11px;
+    border: 0;
+    margin: 0 auto;
+    margin-top: 20px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    border: 1px solid #cccccc;
+    z-index: 1;
+    text-align: left;
+    font-size: 11px;
+    background-color: #ffffff;
+}
+
+.card_resposta {
+    width: 700px;
+    padding: 20px;
+    margin: 0px auto;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    border: 1px solid #cccccc;
+    z-index: 1;
+    text-align: left;
+    font-size: 11px;
+    background-color: #ffffff;
+}
+
+.card_cadastro {
+    padding: 10px;
+    margin: 0px auto;
+    margin-top:20px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    border: 1px solid #cccccc;
+    z-index: 1;
+    text-align: left;
+    font-size: 11px;
+    background-color: #ffffff;
+}
+
+.tab_cadre_fixe, .tab_cadre_fixehov {
+    margin: 0 auto 10px auto;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    background: #f2f2f2;
+    z-index: 1;
+    text-align: left;
+    font-size: 11px;
+    width: 950px;
+}
+
+    .tab_cadre_fixe img {
+        vertical-align: middle;
+    }
+
+.tab_cadrehov, .tab_cadrehov_pointer {
+    margin: 0 auto;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    border: 1px solid #cccccc;
+    text-align: left;
+    font-size: 11px;
+    width: 80%;
+    background-color: #ffffff;
+    -moz-box-shadow: 0px 2px 5px #666;
+    -webkit-box-shadow: 0px 2px 5px #666;
+    box-shadow: 0px 2px 5px #666;
+}
+
+    .tab_cadre th, .tab_cadre_fixe th, .tab_cadre_fixehov th, .tab_cadrehov th, .tab_cadrehov_pointer th, .tab_cadre_report th {
+        font-size: 12px;
+        font-weight: bold;
+        background-color: rgb(76, 126, 171);
+        text-align: center;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -o-border-radius: 4px;
+        padding: 2px;
+        border-bottom: 1px solid #cccccc;
+        padding: 2px;
+        color:white;
+    }
+
+    .tab_cadre td, .tab_cadre_fixe td, .tab_cadre_fixehov td, .tab_cadrehov td, .tab_cadrehov_pointer td, .tab_cadre_report td {
+        padding: 5px 10px;
+    }
+
+    .tab_cadrehov tr:hover, .tab_cadre_fixehov tr:hover {
+        background-color: #FFF4DF;
+    }
+
+    .tab_cadrehov_pointer tr:hover {
+        cursor: pointer;
+        background-color: #FFF4DF;
+    }
+
+.tab_check {
+    text-align: center;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border: 1px solid #aaaaaa;
+    padding: 10px;
+}
+
+    .tab_check th {
+        font-size: 12px;
+        font-weight: bold;
+        color: #fccc6f;
+        vertical-align: bottom;
+    }
+
+    .tab_check td {
+        font-size: 11px;
+        border-bottom: 1px solid #bbbbbb;
+    }
+
+.tab_cadrehov_pointer tr {
+    cursor: pointer;
+}
+
+.tab_bg_1 {
+    background-color: #ffffff;
+}
+
+.tab_bg_1_2 {
+    background-color: #cf9b9b;
+}
+
+.tab_bg_2 {
+    background-color: #f2f2f2;
+}
+
+.tab_bg_2_2 {
+    background-color: #cf9b9b;
+}
+
+.tab_bg_3 {
+    background-color: #e7e7e2;
+}
+
+.tab_bg_4 {
+    background-color: #e4e4e2;
+}
+
+.tab_bg_5 {
+    background-color: #f2f2f2;
+}
+
+.tab_find {
+    background-color: #ccccc7;
+}
+
+    .tab_find:hover {
+        background-color: #FFF2C2;
+        cursor: pointer;
+    }
+
+.dataTables_paginate {
+    float: left !important;
+}
+
+.table-primary {
+    background-color: rgb(184, 218, 255);
+}
+
+.table-warning {
+    background-color: rgb(255, 238, 186);
+}
+
+.table-success {
+    background-color: rgb(195, 230, 203);
+}
+
+.table-danger {
+    background-color: rgb(245, 198, 203);
+}
+
+.imglogo {
+    height: 100px;
+    padding: 5px;
+}
+
+h3 {
+    color: rgb(76, 126, 171);
+    font-weight: 600;
+}
+
+.wrapperstatus {
+    background-color: rgb(235,233,238);
+    border-radius: 5px;
+}
+
+    .wrapperstatus > p {
+        font-weight: 700;
+    }
+
+.statusrepondido {
+    color: forestgreen;
+    padding-right: 12px;
+}
+
+.statusvencido {
+    color: orange;
+    padding-right: 12px;
+}
+
+.statuspendente {
+    color: cornflowerblue;
+    padding-right: 12px;
+}
+
+.statusexcluido {
+    color: red;
+    padding-right: 12px;
+}
+
+#myTable > thead > tr > th {
+    color: rgb(76, 126, 171);
+}

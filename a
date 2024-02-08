@@ -1,0 +1,41 @@
+[33mcommit 21523e94d1f5bab197c1685be25be5c650e63f95[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Lucas Martins Guimarães <lucas_10011@hotmail.com>
+Date:   Thu Mar 25 16:30:12 2021 -0300
+
+    Display name - adicionado ao id como Protocolo no model Manifestacao
+
+[33mcommit 5a656de935accd29714a7c36a6e47725178fb042[m
+Author: Lucas Martins Guimarães <lucas_10011@hotmail.com>
+Date:   Thu Mar 25 16:22:39 2021 -0300
+
+    alteração do displayname created e modified no model Manifestacao
+
+[33mcommit 5156bae74f66ef962d9df7e50e5bfb0c07150a5c[m
+Author: Lucas Martins Guimarães <lucas_10011@hotmail.com>
+Date:   Thu Mar 25 16:16:58 2021 -0300
+
+    Migrations - Adicionado as colunas created e modified a tabela Manifestacao
+
+[33mcommit 517ccd2a1a7be4ff3d14e9756a9425a5345dfb3a[m
+Author: Lucas Martins Guimarães <lucas_10011@hotmail.com>
+Date:   Thu Mar 25 15:54:44 2021 -0300
+
+    Modificaçao da tabela Manifestacao e Criacão da tabela Perfil
+
+[33mcommit 48007741b8120d8a00a82b8d07b64fb15581c97a[m
+Author: Lucas Martins Guimarães <lucas_10011@hotmail.com>
+Date:   Thu Mar 25 13:21:17 2021 -0300
+
+    Criação do banco Ouvidoria e da Tabela Manifestacao
+
+[33mcommit 3cdaab4f7f103a0d4ea8dd3438e7fcb3c8a84532[m
+Author: Lucas Martins Guimarães <lucas_10011@hotmail.com>
+Date:   Thu Mar 25 13:16:20 2021 -0300
+
+    add gitignore
+
+[33mcommit 06ecbadff3f9c2b59abf24eca35e1fce13800484[m
+Author: Lucas Martins Guimarães <lucas_10011@hotmail.com>
+Date:   Thu Mar 25 12:19:51 2021 -0300
+
+    Criação do projeto Gestão Ouvidoria

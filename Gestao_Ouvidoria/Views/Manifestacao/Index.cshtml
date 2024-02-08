@@ -1,0 +1,148 @@
+﻿
+@model IEnumerable<Gestao_Ouvidoria.Models.Manifestacao>
+@using Gestao_Ouvidoria.Models
+@using Gestao_Ouvidoria.Helpers
+
+@{
+    ViewBag.Title = "Home Page";
+
+}
+
+<br />
+
+<div class="container" style="background-color:white;padding:20px; border-radius: 10px;">
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="col-lg-3">
+                <img src="../../Imgs/logo.png" alt="" class="img-fluid imglogo">
+            </div>
+            <div class="col-lg-9 my-auto">
+                <h3>Gestão da Ouvidoria</h3>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <a href='@Url.Action("Create", "Manifestacao")' class="btn btn-primary pull-right">
+                Anotar Manifestação
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <input type="text" id="myCustomSearchBox" class="form-control" placeholder="Digite sua busca aqui">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+        </div>
+        <div class="col-lg-6">
+            <div class="wrapperstatus">
+                <p class="text-right">
+                    Respondida(s): <span class="statusrepondido">@ViewBag.Respondida</span>
+                    Vencida(s): <span class="statusvencido">@ViewBag.Vencida</span>
+                    Pendente(s): <span class="statuspendente">@ViewBag.Pendente </span>
+                    Excluida(s): <span class="statusexcluido">@ViewBag.Excluida</span>
+                    Total: <span>@ViewBag.Total</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <table id="myTable" class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Perfil.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Assunto)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Setor)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Created)
+                    </th>
+                    <th>
+                        Operações
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+
+                    <tr class="@CssTableHelper.GetCssTableStyle(item.Status)">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Perfil.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Assunto)
+                        </td>
+                        <td>
+                            @{
+                                var setor = EnumHelperAttribute.GetDisplayName(item.Setor);
+                                @Html.Raw(setor);
+                            }
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Created)
+                        </td>
+                        <td>
+                            <div class="row">                
+                                <a href='@Url.Action("Create", "RespostaManifestacao", new { id = item.Id })' class="btn btn-primary">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </a>
+                                <a href='@Url.Action("Encaminhar", "RespostaManifestacao", new { id = item.Id })' class="btn btn-info">
+                                    <i class="glyphicon glyphicon-send"></i>
+                                </a> 
+                                <a href='@Url.Action("Delete", "Manifestacao", new { id = item.Id })' class="btn btn-danger">
+                                    <i class="glyphicon glyphicon-trash"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts{
+    <script type="text/javascript">
+
+            $(document).ready(function ($) {
+
+                dTable = $('#myTable').DataTable({
+                    "bLengthChange": false, // this gives option for changing the number of records shown in the UI table
+                    "columnDefs": [
+                        { "className": "dt-center", "targets": "_all" } //columnDefs for align text to center
+                    ],
+                    "dom": "lrtip", //to hide default searchbox but search feature is not disabled hence customised searchbox can be made.
+                    "bInfo": false,
+                    "pageLength": 6,
+
+
+                });
+
+                $('#myCustomSearchBox').keyup(function () {
+                    dTable.search($(this).val()).draw();   // this  is for customized searchbox with datatable search feature.
+                })
+            });
+
+
+
+
+
+
+    </script>
+}

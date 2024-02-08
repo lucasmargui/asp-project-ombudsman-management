@@ -1,0 +1,115 @@
+﻿@model IEnumerable<Gestao_Ouvidoria.Models.RespostaManifestacao>
+@using Gestao_Ouvidoria.Models
+@using Gestao_Ouvidoria.Helpers
+
+
+<br />
+
+<div class="container" style="background-color:white;padding:20px; border-radius: 10px;">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="col-lg-2">
+                <img src="../../Imgs/logo.png" alt="" class="img-fluid imglogo">
+            </div>
+            <div class="col-lg-10 my-auto">
+                <h3>Consulta Manifestações Respondidas</h3>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <input type="text" id="myCustomSearchBox" class="form-control" placeholder="Digite sua busca aqui">
+        </div>
+    </div>
+    <br />
+    <div class="col-lg-12">
+        <table id="myTable" class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Manifestacao.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Manifestacao.Assunto)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Manifestacao.Created)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Manifestacao.StatusSetor)
+                    </th>
+
+                    <th>
+                        Visualizar
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+
+                    <tr class="">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Manifestacao.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Manifestacao.Assunto)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Manifestacao.Created)
+                        </td>
+                        <td>
+                            @{
+                                var setor = EnumHelperAttribute.GetDisplayName(item.Manifestacao.StatusSetor);
+                                @Html.Raw(setor);
+                            }
+                        </td>
+
+                        <td>
+                            <div class="row">
+                                <a href='@Url.Action("Details", "RespostaManifestacao", new { id = item.Id })' class="btn btn-primary">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script type="text/javascript">
+
+        $(document).ready(function ($) {
+
+            dTable = $('#myTable').DataTable({
+                "bLengthChange": false, // this gives option for changing the number of records shown in the UI table
+                "columnDefs": [
+                    { "className": "dt-center", "targets": "_all" } //columnDefs for align text to center
+                ],
+                "dom": "lrtip", //to hide default searchbox but search feature is not disabled hence customised searchbox can be made.
+                "bInfo": false,
+                "pageLength": 6,
+
+
+            });
+
+            $('#myCustomSearchBox').keyup(function () {
+                dTable.search($(this).val()).draw();   // this  is for customized searchbox with datatable search feature.
+            })
+        });
+
+
+
+
+
+
+    </script>
+}
