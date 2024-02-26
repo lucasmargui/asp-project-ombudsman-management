@@ -58,7 +58,7 @@ Passo 3: Ir até o 'Package Manager Console' e executar o seguinte comando:
  Necessário a criação de perfil dos usuários para que as manifestações possam puxar as informações como nome, telefone, tipo de perfil e etc.
 
 <div align="center">
-<img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/aca620fb-c307-4882-b279-7ad9274db22a" style="width:90%">
+<img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/aca620fb-c307-4882-b279-7ad9274db22a" style="width:100%">
 </div>
 
 
@@ -71,7 +71,7 @@ Passo 3: Ir até o 'Package Manager Console' e executar o seguinte comando:
 
 
 <div align="center">
-<img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/6ec0b83c-323e-4aa7-85ca-5a2e58ff9fb7" style="width:90%">
+<img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/6ec0b83c-323e-4aa7-85ca-5a2e58ff9fb7" style="width:100%">
 </div>
 
  
@@ -93,7 +93,7 @@ Uma tabela com lista de manifestações com seus respectivos Status
 
 
 <div align="center">
-<img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/7ced223d-4589-483c-b80e-cded05ef32ce" style="width:90%">
+<img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/7ced223d-4589-483c-b80e-cded05ef32ce" style="width:100%">
 </div>
 
 
@@ -107,7 +107,7 @@ Uma tabela com lista de manifestações com seus respectivos Status
  * Caso a Manifestação esteja respondida ou encaminhada não será possivel exclui-la
 
 <div align="center">
-<img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/5bdbfb41-ed24-404e-bb13-013a3f9d8924" style="width:90%">
+<img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/5bdbfb41-ed24-404e-bb13-013a3f9d8924" style="width:100%">
 </div>
 
 
@@ -116,7 +116,7 @@ Uma tabela com lista de manifestações com seus respectivos Status
 
 
 <div align="center">
-<img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/f83f2a02-074e-4e01-8640-439e5056f988" style="width:90%">
+<img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/f83f2a02-074e-4e01-8640-439e5056f988" style="width:100%">
 </div>
 
 
