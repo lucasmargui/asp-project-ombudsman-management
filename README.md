@@ -13,7 +13,10 @@
  * .NET Framework 4.5;
  
  ## Execução do Entity Framework nas IDE's: VS 2015/2017:
- 
+
+<details>
+  <summary>Clique para mostrar conteúdo</summary>
+  
  Ao realizar os comandos:
  
   ```
@@ -43,20 +46,34 @@ Passo 3: Ir até o 'Package Manager Console' e executar o seguinte comando:
 
  Ao seguir esses passos, evitará de ocorrer o problema/error 50, de conexão com o SQL Server, erro que evita a criação da tabela via 'Code First' do Entity Framework.
 
+</details>
+
+ 
+
+
  ## Utilização do sistema
  
  #### Criação do Perfil
  
  Necessário a criação de perfil dos usuários para que as manifestações possam puxar as informações como nome, telefone, tipo de perfil e etc.
 
- <img src="https://cdn.discordapp.com/attachments/1046824853015113789/1205233803816083456/image.png?ex=65d7a072&is=65c52b72&hm=a2e614792db382fa344a4c3bf92fb225cea9593fc6850a24404dea5b4a3698d7&" alt="">
+<div align="center">
+<img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/aca620fb-c307-4882-b279-7ad9274db22a" style="width:90%">
+</div>
+
+
 
  
  #### Criação da Manifestação
  
  A tabela perfil tem um relacionamento 1:N com as manifestações, logo um usuario pode criar quantas manifestaçôes forem necessárias, onde cada manifestação tem 4 tipos de status e 2 tipos de status de setor
 
- <img src="https://cdn.discordapp.com/attachments/1046824853015113789/1205234350048813096/image.png?ex=65d7a0f5&is=65c52bf5&hm=7fecf55dd37aae86c57af25d00643fbec78246b780846b957d97b1227c7de9f3&" alt="">
+
+
+<div align="center">
+<img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/6ec0b83c-323e-4aa7-85ca-5a2e58ff9fb7" style="width:90%">
+</div>
+
  
  ###### Status
   * Respondida
@@ -72,7 +89,13 @@ Passo 3: Ir até o 'Package Manager Console' e executar o seguinte comando:
 
 Uma tabela com lista de manifestações com seus respectivos Status
 
-<img src="https://cdn.discordapp.com/attachments/1046824853015113789/1205235173957050398/image.png?ex=65d7a1b9&is=65c52cb9&hm=76a7cd7def9e099a431ce614111d837637336d94415ad94278fc560c71063d36&" alt="">
+
+
+
+<div align="center">
+<img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/7ced223d-4589-483c-b80e-cded05ef32ce" style="width:90%">
+</div>
+
 
 #### Criação da Resposta Manifestação
  
@@ -83,10 +106,17 @@ Uma tabela com lista de manifestações com seus respectivos Status
  * Caso a Manifestação seja encaminhada para setor, seu status mudará de Não encaminhado para Encaminhado
  * Caso a Manifestação esteja respondida ou encaminhada não será possivel exclui-la
 
-<img src="https://cdn.discordapp.com/attachments/1046824853015113789/1205235898669735996/image.png?ex=65d7a266&is=65c52d66&hm=b0fbfebd863b8d80257579d4c692a2d6c4228ebaddc446c95edd730f5812fd75&" alt="">
+<div align="center">
+<img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/5bdbfb41-ed24-404e-bb13-013a3f9d8924" style="width:90%">
+</div>
+
 
 
 ### Resultado
 
-<img src="https://cdn.discordapp.com/attachments/1046824853015113789/1205236058426708008/image.png?ex=65d7a28c&is=65c52d8c&hm=c185dceb33344173edd828be8f65b9dee9d5e38e46364bcacf6e273cacf43921&" alt="">
+
+<div align="center">
+<img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/f83f2a02-074e-4e01-8640-439e5056f988" style="width:90%">
+</div>
+
 
