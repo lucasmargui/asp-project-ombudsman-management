@@ -1,61 +1,28 @@
-<H1 align="center">Gestão Ouvidoria</H1>
-<p align="center">🚀 Desenvolvimento do projeto para teste de aptidão de um sistema de Gestão de Ouvidoria em Asp.NET MVC & Entity Framework.</p>
+<H1>Asp.net - Ombudsman Management </H1>
+<p align="left">Development of the project for aptitude testing of an Ombudsman Management system in Asp.NET MVC & Entity Framework.</p>
 
-## Recursos Utilizados
 
- * Visual Studio 2017
- * Asp.NET MVC 4;
- * Entity Framework 4;
- * Code First;
- * SQL Server Management 2014;
- * Single Reposity Pattern;
- * Bootstrap 3;
- * .NET Framework 4.5;
+## Resources Used
+
+  * Visual Studio 2017
+  * Asp.NET MVC 4;
+  * Entity Framework 4;
+  * Code First;
+  * SQL Server Management 2014;
+  * Single Repositivity Pattern;
+  * Bootstrap 3;
+  * .NET Framework 4.5;
+
+<div align="center">
+<img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/f83f2a02-074e-4e01-8640-439e5056f988" style="width:100%">
+</div>
+
+
+  ## System usage
  
- ## Execução do Entity Framework nas IDE's: VS 2015/2017:
-
-<details>
-  <summary>Clique para mostrar conteúdo</summary>
-  
- Ao realizar os comandos:
+  #### Profile Create
  
-  ```
-    Enable-Migrations
-  ```
-  e
-  
-  ```
-    Update-Database -Verbose
-  ```
-  
-Nas versões mais recentes do Visual Studio (2015/2017), se faz necessário criar uma nova instância do localdb do sql no seu computador. A qual poderá ser criado da seguinte maneira:
-
-Passo 1: Abrir o cmd e executar o seguinte comando:
-  ```
-  SqlLocalDB.exe create "Local"
-  ```
-Passo 2: Executar a instance com seguinte comando:
-  ```
-  SqlLocalDb.exe start
-  ```
-  
-Passo 3: Ir até o 'Package Manager Console' e executar o seguinte comando:
-  ```
-  Update-Database -Verbose
-  ```
-
- Ao seguir esses passos, evitará de ocorrer o problema/error 50, de conexão com o SQL Server, erro que evita a criação da tabela via 'Code First' do Entity Framework.
-
-</details>
-
- 
-
-
- ## Utilização do sistema
- 
- #### Criação do Perfil
- 
- Necessário a criação de perfil dos usuários para que as manifestações possam puxar as informações como nome, telefone, tipo de perfil e etc.
+  It is necessary to create a user profile so that manifestations can retrieve information such as name, telephone number, type of profile, etc.
 
 <div align="center">
 <img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/aca620fb-c307-4882-b279-7ad9274db22a" style="width:100%">
@@ -64,9 +31,9 @@ Passo 3: Ir até o 'Package Manager Console' e executar o seguinte comando:
 
 
  
- #### Criação da Manifestação
+  #### Manifestation Create
  
- A tabela perfil tem um relacionamento 1:N com as manifestações, logo um usuario pode criar quantas manifestaçôes forem necessárias, onde cada manifestação tem 4 tipos de status e 2 tipos de status de setor
+  The profile table has a 1:N relationship with the manifestations, so a user can create as many manifestations as necessary, where each manifestation has 4 types of status and 2 types of sector status
 
 
 
@@ -75,36 +42,33 @@ Passo 3: Ir até o 'Package Manager Console' e executar o seguinte comando:
 </div>
 
  
- ###### Status
-  * Respondida
-  * Pendente
-  * Excluida
-  * Vencida
+  ###### Status
+   * Answered
+   * Pending
+   * Deleted
+   * Due
 
- ###### Status Setor
-  * Encaminhado
-  * Não encaminhado
+  ###### Sector Status
+   * Forwarded
+   * Not forwarded
 
-#### Lista de Manifestações
+#### List of Manifestations
 
-Uma tabela com lista de manifestações com seus respectivos Status
-
-
+A table with a list of manifestations with their respective Status
 
 
 <div align="center">
 <img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/7ced223d-4589-483c-b80e-cded05ef32ce" style="width:100%">
 </div>
 
-
-#### Criação da Resposta Manifestação
+#### Creation of the Manifestation Response
  
- O ouvidor visualizará a manifestação e terá opção de responder a manifestação ao ouvinte e anexar um arquivo juntamente, opcionalmente podendo encaminhar para o setor desejado
+  The listener will view the manifestation and will have the option to respond to the listener and attach a file together, optionally being able to forward it to the desired sector
  
- * Caso a Manifestação ja tenha sido respondida o formulario ficará indisponivel.
- * Caso a Manifestação seja respondida, seu status mudará de Pendente para Respondida
- * Caso a Manifestação seja encaminhada para setor, seu status mudará de Não encaminhado para Encaminhado
- * Caso a Manifestação esteja respondida ou encaminhada não será possivel exclui-la
+  * If the Manifestation has already been responded to, the form will be unavailable.
+  * If the Manifestation is responded to, its status will change from Pending to Responded
+  * If the Manifestation is forwarded to the sector, its status will change from Not forwarded to Forwarded
+  * If the Manifestation is answered or forwarded, it will not be possible to delete it
 
 <div align="center">
 <img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/5bdbfb41-ed24-404e-bb13-013a3f9d8924" style="width:100%">
@@ -112,11 +76,49 @@ Uma tabela com lista de manifestações com seus respectivos Status
 
 
 
-### Resultado
 
 
-<div align="center">
-<img src="https://github.com/lucasmargui/ASP_Projeto_Gestao/assets/157809964/f83f2a02-074e-4e01-8640-439e5056f988" style="width:100%">
-</div>
+
+
+ 
+  ## Entity Framework execution in IDE's: VS 2015/2017:
+
+<details>
+   <summary>Click to show content</summary>
+  
+  When executing the commands:
+ 
+   ```
+     Enable-Migrations
+   ```
+   It is
+  
+   ```
+     Update-Database -Verbose
+   ```
+  
+In the most recent versions of Visual Studio (2015/2017), it is necessary to create a new instance of sql localdb on your computer. Which can be created in the following way:
+
+Step 1: Open cmd and execute the following command:
+   ```
+   SqlLocalDB.exe create "Local"
+   ```
+Step 2: Run the instance with the following command:
+   ```
+   SqlLocalDb.exe start
+   ```
+  
+Step 3: Go to the 'Package Manager Console' and execute the following command:
+   ```
+   Update-Database -Verbose
+   ```
+
+  By following these steps, you will avoid problem/error 50, connecting to SQL Server, an error that prevents the creation of the table via 'Code First' of the Entity Framework.
+
+</details>
+
+ 
+
+
 
 
