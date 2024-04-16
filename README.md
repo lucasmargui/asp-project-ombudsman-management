@@ -1,5 +1,5 @@
-<H1>Asp.net - Ombudsman Management </H1>
-<p align="left">Development of the project for aptitude testing of an Ombudsman Management system in Asp.NET MVC & Entity Framework.</p>
+<H1 align="center">Asp.net - Ombudsman Management </H1>
+<p align="center">🚀 Development of the project for aptitude testing of an Ombudsman Management system in Asp.NET MVC & Entity Framework.</p>
 
 
 ## Resources Used
